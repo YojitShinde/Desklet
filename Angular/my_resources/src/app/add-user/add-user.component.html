@@ -1,0 +1,73 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/login" style="font-size: 30px; color: #e95050;">Desklet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="button m-1 btn btn-light btn-outline-dark" href="/home">Home</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="button m-1 btn btn-light btn-outline-dark" href="/recruiterPosts">My Posts</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="button m-1 btn btn-light btn-outline-dark" href="/login">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+
+    <div class="display-2"><b>Add User</b></div><br>
+
+    <form role="form" #fm="ngForm" (ngSubmit)="fm.form.valid && onSubmit()">
+
+        <br>
+        <div class="one">
+            <label>Name:</label><br>
+            <input type="text" name="name" [(ngModel)]="user.name"
+            [ngClass]="{'invalid-data':name.invalid && fm.submitted,'valid-data':name.valid && fm.submitted}"
+            required name="name" #name="ngModel"><br>
+            <div *ngIf="name.invalid &&  fm.submitted">
+                <span style="color: #e95050;">Please Enter Name</span>
+            </div><br>
+        </div>
+
+        <div class="one">
+            <label>Phone:</label><br>
+            <input type="text" name="phone" [(ngModel)]="user.phone"
+            [ngClass]="{'invalid-data':phone.invalid && fm.submitted,'valid-data':phone.valid && fm.submitted}"
+            required name="phone" #phone="ngModel"><br>
+            <div *ngIf="phone.invalid &&  fm.submitted">
+                <span style="color: #e95050;">Please Enter Phone Number</span>
+            </div><br>
+        </div>
+        
+        <div class="one">
+            <label>Email:</label><br>
+            <input type="text" name="email_id" [(ngModel)]="user.email_id"
+            [ngClass]="{'invalid-data':email_id.invalid && fm.submitted,'valid-data':email_id.valid && fm.submitted}"
+            required name="email_id" #email_id="ngModel"><br>
+            <div *ngIf="email_id.invalid &&  fm.submitted">
+                <span style="color: #e95050;">Please Enter Email</span>
+            </div><br>
+        </div>
+        
+        <div class="one">
+            <label>Password:</label><br>
+            <input type="password" name="password" [(ngModel)]="user.password"
+            [ngClass]="{'invalid-data':password.invalid && fm.submitted,'valid-data':password.valid && fm.submitted}"
+            required name="password" #password="ngModel"><br>
+            <div *ngIf="password.invalid &&  fm.submitted">
+                <span style="color: #e95050;">Please Enter Password</span>
+            </div><br><br>
+        </div>
+
+        <input type="submit" value="Submit"><br><br><br>
+      </form>
+
+      <br><br>
+
+</div>

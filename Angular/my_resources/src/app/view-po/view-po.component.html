@@ -1,0 +1,60 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/login" style="font-size: 30px; color: #e95050;">Desklet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="button m-1 btn btn-light btn-outline-dark" href="/home">Home</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="button m-1 btn btn-light btn-outline-dark" href="/recruiterPosts">My Posts</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="button m-1 btn btn-light btn-outline-dark" href="/login">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+
+      <div class="display-2"><b>Purchase Orders</b></div><br>
+
+      <table id="polist" >
+        <tr>
+            <th>PO Number</th>
+            <th>Date</th>
+            <th>Payment Mode</th>
+            <th>Supplier Name</th>
+            <th>Supplier City</th>
+            <th>Supplier Email</th>
+            <th>Supplier Phone</th>
+            <th>Product</th>
+            <th>Product Quantity</th>
+            <th>Unit Price</th>
+            <th>Total Price</th>
+            <th colspan="3">Action</th>
+        </tr>
+ 
+        <tr *ngFor="let list of allPOs">
+
+            <td>{{list.po_number}}</td>
+            <td>{{list.date}}</td>
+            <td>{{list.payment_mode}}</td>
+            <td>{{list.supplier_name}}</td>
+            <td>{{list.supplier_city}}</td>
+            <td>{{list.supplier_email}}</td>
+            <td>{{list.supplier_phone}}</td>
+            <td>{{list.product}}</td>
+            <td>{{list.product_qty}}</td>
+            <td>{{list.unit_price}}</td>
+            <td>{{list.total_price}}</td>
+          
+          <button (click)="sendPO(list)">Send PO</button>
+          <button (click)="removePO(list.po_number)">Remove</button>
+
+          </tr>
+    </table>
+</div>

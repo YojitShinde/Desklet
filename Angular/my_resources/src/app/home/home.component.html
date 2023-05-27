@@ -1,0 +1,106 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/login" style="font-size: 30px; color: #e95050;">Desklet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="button m-1 btn btn-light btn-outline-dark" href="/home">Home</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="button m-1 btn btn-light btn-outline-dark" href="/recruiterPosts">My Posts</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="button m-1 btn btn-light btn-outline-dark" href="/login">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+
+      <div class="display-2">Welcome,<br><b style="color: #e95050;">{{name}}</b></div><br><br>
+      <div class="card text-center">
+        <div class="card-header">
+          <b>Operations</b>
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title">Purchase Order</h5>
+          <p class="card-text">
+            A purchase order is a commercial document issued by a buyer to a seller, 
+            indicating types, quantities, and agreed prices for products or services.
+          </p>
+          <a routerLink="/addPO" class="btn btn-primary" style="background-color: #e95050;">Add Purchase Order</a>
+          <div class="space"></div>
+          <a routerLink="/viewPO" class="btn btn-primary" style="background-color: #e95050;">View Purchase Orders</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+
+        <div class="card-body">
+          <h5 class="card-title">Sales Order</h5>
+          <p class="card-text">
+            A sales order is a commercial document issued by a seller to the buyer. 
+            It garentees that the seller will sell the product to the buyer.
+          </p>
+          <a routerLink="/addSO" class="btn btn-primary" style="background-color: #e95050;">Add Sales Order</a>
+          <div class="space"></div>
+          <a routerLink="/viewSO" class="btn btn-primary" style="background-color: #e95050;">View Sales Orders</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+
+        <div class="card-body">
+          <h5 class="card-title">Materials Received Note</h5>
+          <p class="card-text">
+            A materials received note is a commercial document issued by the buyer to the seller, 
+            acknowledging the products that have been received.
+          </p>
+          <a routerLink="/addMRN" class="btn btn-primary" style="background-color: #e95050;">Add Materials Received Note</a>
+          <div class="space"></div>
+          <a routerLink="/viewMRN" class="btn btn-primary" style="background-color: #e95050;">View Materials Received Note</a>
+        </div>
+        <div class="card-footer text-muted"></div>
+
+      <!-- <div class="card-body">
+        <h5 class="card-title">Purchase Return</h5>
+        <p class="card-text">
+          A purchase return is a official document issued by the buyer in order to return the purchased products back to the seller.
+        </p>
+        <a href="#" class="btn btn-primary">Add Purchase Return</a>
+        <div class="space"></div>
+        <a href="#" class="btn btn-primary">View Purchase Return</a>
+      </div>
+      <div class="card-footer text-muted"></div> -->
+
+    </div>
+
+    <br><br>
+
+    <div class="card text-center">
+    <div class="card-header">
+      <b>Users</b>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Add Users</h5>
+            <p class="card-text">Creates a new user account for the website.</p>
+            <a routerLink="/addUser" class="btn btn-primary" style="background-color: #e95050;">Add</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Remove Users</h5>
+            <p class="card-text">Deletes unwanted user accounts.</p>
+            <a routerLink="/viewUser" class="btn btn-primary" style="background-color: #e95050;">Remove</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted"></div>
+    </div><br><br>
+</div>

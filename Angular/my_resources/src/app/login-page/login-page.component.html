@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div class="display-2"><b>Desklet</b></div>
+
+    <div class="split-left">
+        <img src="assets/login-page.png">
+    </div><br><br><br>
+
+    <div class="split-right">
+        <form role="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()">
+            <input type="text" placeholder="Email Id" id="id" name="email_id" [(ngModel)]="user.email_id"
+                [ngClass]="{'invalid-data':email_id.invalid && f.submitted,'valid-data':email_id.valid && f.submitted}"
+                required name="email_id" #email_id="ngModel">
+            <div *ngIf="email_id.invalid &&  f.submitted">
+                <span style="color: #e95050;"><b>Enter Login Id</b></span>
+            </div>
+            <br>
+            <br>
+    
+            <input type="password" placeholder="Password" id="fname" name="password" [(ngModel)]="user.password"
+                [ngClass]="{'invalid-data':password.invalid && f.submitted,'valid-data':password.valid && f.submitted}"
+                required name="password" #password="ngModel">
+                <div *ngIf="password.invalid &&  f.submitted">    
+                    <span style="color: #e95050;"><b>Please Enter Password</b></span>
+                </div>
+                <br>
+                <br>
+                <br>
+    
+            <input type="submit" value="Login">
+    
+            <div class="incorrectDetails" [hidden]="hide">
+                <span style="color: #e95050; margin-left: 25%;"><b>Please Enter Correct Login Details</b></span>
+            </div>
+        </form>
+    </div>
+    
+</div>
+
